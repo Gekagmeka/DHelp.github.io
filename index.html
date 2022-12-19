@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Test for Roman</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-ico.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="images/fav-ico.png">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="wrapper">
+      <header class="header">
+         <div class="container">
+            <div class="content">
+               <a class="logo" href="#">
+                  <i class="ico ico-logo">
+                     <svg>
+                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-logo"></use>
+                     </svg>
+                  </i>
+               </a>
+               <nav id="header-menu" class="menu">
+                  <ul class="menu-list">
+                     <li class="menu-item"><a href="#" class="menu-link active">People</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">How it works</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">About project</a></li>
+                     <li class="menu-item"><a href="#" class="menu-link">FAQ</a></li>
+                  </ul>
+               </nav>
+               <div class="personal-block">
+                  <div class="personal-price">
+                     $90
+                  </div>
+                  <button id="burgerBtn" class="personal-options" type="button">
+                     <i class="ico ico-options">
+                        <svg>
+                          <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-options"></use>
+                        </svg>
+                     </i>
+                  </button>
+                  <!-- if user is autorized - need to add class .user-autorized to .personal-info and it will work hover effect with logout -->
+                  <!-- if user is NOT autorized - need to remove class .user-autorized from .personal-info and we can see Sign in instead of user name -->
+                  <div class="personal-info">
+                     <div class="personal-ico">
+                        <!-- if we have logged in user - need to add class .hidden-block to the .ico.ico-user block - to hide this block -->
+                        <i class="ico ico-user">
+                           <svg>
+                           <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-user"></use>
+                           </svg>
+                        </i>
+                        <!-- to add class .is-user to the next .img-smooth - to show the icon of user -->
+                        <div class="img-smooth">
+                           <img src="images/ico-user.png" width="40" height="40" alt="">
+                        </div>
+                        <div class="user-name-block">
+                           <span class="user-name">Konstatyn K.</span><span class="sign-in-link">Sign in</span>
+                        </div>
+                     </div>
+                     <ul class="list">
+                        <li class="item">
+                           <a class="link" href="#">Profile</a>
+                        </li>
+                        <li class="item">
+                           <a class="link red-text" href="#">Logout</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <!-- filters block -->
+         <section class="section-filters">
+            <div class="container">
+               <ul class="tabs">
+                  <li class="tabs-item active">
+                     All people
+                  </li>
+                  <li class="tabs-item">
+                     Pensioners
+                  </li>
+                  <li class="tabs-item">
+                     Disabled
+                  </li>
+                  <li class="tabs-item">
+                     Single mothers with children
+                  </li>
+                  <li class="tabs-item">
+                     Unemployed
+                  </li>
+                  <li class="tabs-item">
+                     Large families
+                  </li>
+                  <li class="tabs-item">
+                     Lost home
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <!-- section-first (frame 108) -->
+         <section class="section-first hidden-block">
+            <div class="container">
+               <div class="content row">
+                  <!-- left side -->
+                  <div class="info-column">
+                     <div class="img-block">
+                        <a class="ico-like" href="#">
+                           <i class="ico ico-heart">
+                              <svg>
+                                <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-heart"></use>
+                              </svg>
+                           </i>
+                        </a>
+                        <div class="img-smooth">
+                           <img  srcset="images/img-01-480.png 180w,
+                                            images/img-01-1920.png 250w"
+                                            sizes="(max-width: 480px) 180px, 250px" 
+                                    src="images/img-01-1920.png" width="250" height="250" alt="">
+                        </div>
+                     </div>
+                     <div class="name-block">
+                        <h2 class="name-row">
+                           Lilia Vykhodtseva
+                        </h2>
+                        <ul class="list">
+                           <li class="item">
+                               50 years
+                           </li>
+                           <li class="item">
+                              <i class="ico ico-unemployed">
+                                 <svg>
+                                   <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-unemployed"></use>
+                                 </svg>
+                              </i>
+                              Unemployed
+                           </li>
+                           <li class="item">
+                              <i class="ico ico-pin">
+                                 <svg>
+                                   <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-pin"></use>
+                                 </svg>
+                              </i>
+                              Kharkiv
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="text-block">
+                        <h1 class="title">
+                           I lost my job, where I worked for 20 years, because it was located in the most destroyed and now practically uninhabited area of Northern Saltovka.
+                        </h1>
+                        <p class="text">
+                           I have not left the city since the beginning of the war. I stay all the time in the city, which is shelled every day. I lost my job, where I worked for 20 years, because it was located in the most destroyed and now practically uninhabited area of Northern Saltovka. Also, two elderly 80-year-old parents stayed with me in the city. And three cats. Dad after three operations - twice cancer and aortic replacement. They need my support. It is very difficult for us to feed ourselves. It is hard to find a job.
+                        </p>
+                     </div>
+                     <!-- it will be hidden for mobile -->
+                     <div class="social-block">
+                        <p class="text">
+                           Share this person in your socials
+                        </p>
+                        <ul class="list">
+                           <li class="item">
+                              <a href="#" class="link">
+                                 <i class="ico ico-facebook">
+                                    <svg>
+                                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-facebook"></use>
+                                    </svg>
+                                 </i>
+                              </a>
+                           </li>
+                           <li class="item">
+                              <a href="#" class="link">
+                                 <i class="ico ico-google">
+                                    <svg>
+                                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-google"></use>
+                                    </svg>
+                                 </i>
+                              </a>
+                           </li>
+                           <li class="item">
+                              <a href="#" class="link">
+                                 <i class="ico ico-instagram">
+                                    <!-- <svg>
+                                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-instagram"></use>
+                                    </svg> -->
+                                    <svg>
+                                       <path d="M12.5027 5.8467C9.09744 5.8467 6.35075 8.594 6.35075 12C6.35075 15.406 9.09744 18.1533 12.5027 18.1533C15.9079 18.1533 18.6546 15.406 18.6546 12C18.6546 8.594 15.9079 5.8467 12.5027 5.8467ZM12.5027 16.0004C10.3021 16.0004 8.50312 14.2064 8.50312 12C8.50312 9.7936 10.2968 7.99955 12.5027 7.99955C14.7086 7.99955 16.5022 9.7936 16.5022 12C16.5022 14.2064 14.7032 16.0004 12.5027 16.0004V16.0004ZM20.3412 5.595C20.3412 6.39295 19.6987 7.03024 18.9062 7.03024C18.1085 7.03024 17.4713 6.38759 17.4713 5.595C17.4713 4.80241 18.1138 4.15977 18.9062 4.15977C19.6987 4.15977 20.3412 4.80241 20.3412 5.595ZM24.4157 7.05166C24.3247 5.12909 23.8856 3.42609 22.4775 2.02298C21.0747 0.619882 19.3721 0.180743 17.4499 0.0843468C15.4689 -0.0281156 9.53112 -0.0281156 7.55008 0.0843468C5.6333 0.175388 3.93068 0.614526 2.52253 2.01763C1.11439 3.42073 0.680703 5.12373 0.584328 7.0463C0.471891 9.02778 0.471891 14.9669 0.584328 16.9483C0.675349 18.8709 1.11439 20.5739 2.52253 21.977C3.93068 23.3801 5.62794 23.8193 7.55008 23.9157C9.53112 24.0281 15.4689 24.0281 17.4499 23.9157C19.3721 23.8246 21.0747 23.3855 22.4775 21.977C23.8803 20.5739 24.3193 18.8709 24.4157 16.9483C24.5281 14.9669 24.5281 9.03314 24.4157 7.05166V7.05166ZM21.8564 19.0744C21.4388 20.1241 20.6303 20.9327 19.5755 21.3558C17.996 21.9824 14.2481 21.8378 12.5027 21.8378C10.7572 21.8378 7.00396 21.977 5.42984 21.3558C4.38042 20.9381 3.57195 20.1294 3.14897 19.0744C2.52253 17.4946 2.66709 13.7458 2.66709 12C2.66709 10.2542 2.52789 6.50006 3.14897 4.92558C3.56659 3.87593 4.37507 3.06728 5.42984 2.6442C7.00931 2.01763 10.7572 2.16222 12.5027 2.16222C14.2481 2.16222 18.0014 2.02298 19.5755 2.6442C20.6249 3.06192 21.4334 3.87058 21.8564 4.92558C22.4828 6.50541 22.3383 10.2542 22.3383 12C22.3383 13.7458 22.4828 17.4999 21.8564 19.0744Z" fill="url('#grad')"/>
+                                       <defs>
+                                          <linearGradient id="grad" x1="1" y1="2.5" x2="12.5" y2="24" gradientUnits="userSpaceOnUse">
+                                             <stop stop-color="#FF9900"/>
+                                             <stop offset="1" stop-color="#EC24C0"/>
+                                          </linearGradient>
+                                       </defs>
+                                    </svg>
+                                 </i>
+                              </a>
+                           </li>
+                           <li class="item">
+                              <a href="#" class="link">
+                                 <i class="ico ico-linkedin">
+                                    <svg>
+                                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-linkedin"></use>
+                                    </svg>
+                                 </i>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- right side -->
+                  <div class="media-column">
+                     <div class="img-row">
+                        <div class="img-block">
+                           <div class="img-smooth">
+                              <img  srcset="images/img-03-480.png 480w,
+                                            images/img-03-1920.png 1920w"
+                                            sizes="(max-width: 480px) 100vw, 866px" 
+                                    src="images/img-03-1920.png" width="866" height="428" alt="">
+                           </div>
+                        </div>
+                        <p class="text">Lilia with her parents</p>
+                     </div>
+                     <div class="img-row">
+                        <div class="img-block">
+                           <div class="img-smooth">
+                              <img  srcset="images/img-04-480.png 480w,
+                                            images/img-04-1920.png 1920w"
+                                            sizes="(max-width: 480px) 100vw, 866px" 
+                                    src="images/img-04-1920.png" width="866" height="428" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="img-row">
+                        <div class="img-block">
+                           <div class="img-smooth">
+                              <img  srcset="images/img-05-480.png 480w,
+                                            images/img-05-1920.png 1920w"
+                                            sizes="(max-width: 480px) 100vw, 866px" 
+                                    src="images/1920.jpeg" width="866" height="428" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- only for mobile version (it's dublicate of the social block) -->
+                  <div class="social-block mobile-block">
+                     <p class="text">
+                        Share this person in your socials
+                     </p>
+                     <ul class="list">
+                        <li class="item">
+                           <a href="#" class="link">
+                              <i class="ico ico-facebook">
+                                 <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-facebook"></use>
+                                 </svg>
+                              </i>
+                           </a>
+                        </li>
+                        <li class="item">
+                           <a href="#" class="link">
+                              <i class="ico ico-google">
+                                 <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-google"></use>
+                                 </svg>
+                              </i>
+                           </a>
+                        </li>
+                        <li class="item">
+                           <a href="#" class="link">
+                              <i class="ico ico-instagram">
+                                 <!-- <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-instagram"></use>
+                                 </svg> -->
+                                 <svg>
+                                    <path d="M12.5027 5.8467C9.09744 5.8467 6.35075 8.594 6.35075 12C6.35075 15.406 9.09744 18.1533 12.5027 18.1533C15.9079 18.1533 18.6546 15.406 18.6546 12C18.6546 8.594 15.9079 5.8467 12.5027 5.8467ZM12.5027 16.0004C10.3021 16.0004 8.50312 14.2064 8.50312 12C8.50312 9.7936 10.2968 7.99955 12.5027 7.99955C14.7086 7.99955 16.5022 9.7936 16.5022 12C16.5022 14.2064 14.7032 16.0004 12.5027 16.0004V16.0004ZM20.3412 5.595C20.3412 6.39295 19.6987 7.03024 18.9062 7.03024C18.1085 7.03024 17.4713 6.38759 17.4713 5.595C17.4713 4.80241 18.1138 4.15977 18.9062 4.15977C19.6987 4.15977 20.3412 4.80241 20.3412 5.595ZM24.4157 7.05166C24.3247 5.12909 23.8856 3.42609 22.4775 2.02298C21.0747 0.619882 19.3721 0.180743 17.4499 0.0843468C15.4689 -0.0281156 9.53112 -0.0281156 7.55008 0.0843468C5.6333 0.175388 3.93068 0.614526 2.52253 2.01763C1.11439 3.42073 0.680703 5.12373 0.584328 7.0463C0.471891 9.02778 0.471891 14.9669 0.584328 16.9483C0.675349 18.8709 1.11439 20.5739 2.52253 21.977C3.93068 23.3801 5.62794 23.8193 7.55008 23.9157C9.53112 24.0281 15.4689 24.0281 17.4499 23.9157C19.3721 23.8246 21.0747 23.3855 22.4775 21.977C23.8803 20.5739 24.3193 18.8709 24.4157 16.9483C24.5281 14.9669 24.5281 9.03314 24.4157 7.05166V7.05166ZM21.8564 19.0744C21.4388 20.1241 20.6303 20.9327 19.5755 21.3558C17.996 21.9824 14.2481 21.8378 12.5027 21.8378C10.7572 21.8378 7.00396 21.977 5.42984 21.3558C4.38042 20.9381 3.57195 20.1294 3.14897 19.0744C2.52253 17.4946 2.66709 13.7458 2.66709 12C2.66709 10.2542 2.52789 6.50006 3.14897 4.92558C3.56659 3.87593 4.37507 3.06728 5.42984 2.6442C7.00931 2.01763 10.7572 2.16222 12.5027 2.16222C14.2481 2.16222 18.0014 2.02298 19.5755 2.6442C20.6249 3.06192 21.4334 3.87058 21.8564 4.92558C22.4828 6.50541 22.3383 10.2542 22.3383 12C22.3383 13.7458 22.4828 17.4999 21.8564 19.0744Z" fill="url('#grad')"/>
+                                       <defs>
+                                          <linearGradient id="grad" x1="1" y1="2.5" x2="12.5" y2="24" gradientUnits="userSpaceOnUse">
+                                             <stop stop-color="#FF9900"/>
+                                             <stop offset="1" stop-color="#EC24C0"/>
+                                          </linearGradient>
+                                       </defs>
+                                 </svg>
+                              </i>
+                           </a>
+                        </li>
+                        <li class="item">
+                           <a href="#" class="link">
+                              <i class="ico ico-linkedin">
+                                 <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-linkedin"></use>
+                                 </svg>
+                              </i>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+
+               </div>
+            </div>
+         </section>
+         <!-- section-profile (frame 110 and 111) -->
+         <section class="section-profile hidden-block">
+            <div class="container">
+               <div class="content">
+                  <div class="img-block">
+                     <div class="img-smooth">
+                        <img  srcset="images/img-06-480.png 180w,
+                                            images/img-06-1920.png 250w"
+                                            sizes="(max-width: 480px) 180px, 250px" 
+                                    src="images/img-06-1920.png" width="250" height="250" alt="">
+                     </div>
+                  </div>
+                  <div class="text-block">
+                     <h2 class="title name-row">
+                        Konstatyn Konstantynopolsky
+                     </h2>
+                     <p class="text-row">
+                        Helped no one, but we believe in you :)
+                     </p>
+                  </div>
+                  <form class="form">
+                     <div class="email-row">Email</div>
+                     <div class="email-meaning">konstantynopolsky@gmail.com</div>
+                     <button class="email-btn btn" type="button">Change password</button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <!-- section-donations (frame 116 and 115) -->
+         <!-- class .donations-waiting need to add to the block .section-donations if there is no filter block -->
+         <section class="section-donations donations-waiting hidden-block">
+            <div class="container">
+               <!-- block with list of people is empty (frame 116) -->
+               <div class="content empty-block hidden-block">
+                  <div class="text-block">
+                     <h2 class="title">
+                        Your list of people in need is empty now.
+                     </h2>
+                     <p class="text">
+                        Now 260 people need help
+                     </p>
+                     <a class="need-btn btn" href="/">View people in need</a>
+                  </div>
+               </div>
+               <!-- block with waiting people (frame 115) - we use class .waiting-block for this block with class .content (and delete class .support-block) -->
+               <!-- for block with support monthly need to use class .support-block with class .content (and delete class .waiting-block) -->
+               <div class="content waiting-block">
+                  <h2 class="title">
+                     <span class="waiting-title">People waiting for your donation</span>
+                     <span class="support-title">People you support monthly</span>
+                  </h2>
+                  <div class="row">
+                     <div class="column-cards">
+                        <ul class="list-cards">
+                           <li class="item-cards">
+                              <div class="cards-info">
+                                 <div class="img-smooth">
+                                    <img  srcset="images/img-07-480.png 100w,
+                                            images/img-07-1920.png 180w"
+                                            sizes="(max-width: 480px) 100px, 180px" 
+                                    src="images/img-07-1920.png" width="180" height="180" alt="">
+                                 </div>
+                                 <h4 class="cards-name">
+                                    Lilia Vykhodtseva
+                                 </h4>
+                                 <div class="cards-price">
+                                    30$<span class="per-month">/mo</span>
+                                 </div>
+                                 <div class="cards-footnote">
+                                    <p class="text">Next charge</p>
+                                    <p class="date"><time datetime="2022-12-01">Dec 1, 2022</time></p>
+                                 </div>
+                              </div>
+                              <div class="btns-block">
+                                 <a href="#" class="btn">View profile</a>
+                                 <a href="#" class="btn">Edit donation</a>
+                                 <a href="#" class="btn red-text btn-remove">Remove</a>
+                                 <a href="#" class="btn red-text btn-stop-donating">Stop donating</a>
+                              </div>
+                           </li>
+                           <li class="item-cards">
+                              <div class="cards-info">
+                                 <div class="img-smooth">
+                                    <img  srcset="images/img-08-480.png 100w,
+                                            images/img-08-1920.png 180w"
+                                            sizes="(max-width: 480px) 100px, 180px" 
+                                    src="images/img-08-1920.png" width="180" height="180" alt="">
+                                 </div>
+                                 <h4 class="cards-name">
+                                    Vladyslav Zhuravlev
+                                 </h4>
+                                 <div class="cards-price">
+                                    30$<span class="per-month">/mo</span>
+                                 </div>
+                                 <div class="cards-footnote">
+                                    <p class="text">Next charge</p>
+                                    <p class="date"><time datetime="2022-12-01">Dec 1, 2022</time></p>
+                                 </div>
+                              </div>
+                              <div class="btns-block">
+                                 <a href="#" class="btn">View profile</a>
+                                 <a href="#" class="btn">Edit donation</a>
+                                 <a href="#" class="btn red-text btn-remove">Remove</a>
+                                 <a href="#" class="btn red-text btn-stop-donating">Stop donating</a>
+                              </div>
+                           </li>
+                           <li class="item-cards">
+                              <div class="cards-info">
+                                 <div class="img-smooth">
+                                    <img  srcset="images/img-09-480.png 100w,
+                                            images/img-09-1920.png 180w"
+                                            sizes="(max-width: 480px) 100px, 180px" 
+                                    src="images/img-09-1920.png" width="180" height="180" alt="">
+                                 </div>
+                                 <h4 class="cards-name">
+                                    Yevhen Hlinka
+                                 </h4>
+                                 <div class="cards-price">
+                                    30$<span class="per-month">/mo</span>
+                                 </div>
+                                 <div class="cards-footnote">
+                                    <p class="text">Next charge</p>
+                                    <p class="date"><time datetime="2022-12-01">Dec 1, 2022</time></p>
+                                 </div>
+                              </div>
+                              <div class="btns-block">
+                                 <a href="#" class="btn">View profile</a>
+                                 <a href="#" class="btn">Edit donation</a>
+                                 <a href="#" class="btn red-text btn-remove">Remove</a>
+                                 <a href="#" class="btn red-text btn-stop-donating">Stop donating</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="column-payment">
+                        <div class="method-payment">
+                           <p class="text">Total</p>
+                           <div class="price">90$</div>
+                           <p class="text">Method</p>
+                           <div class="card">
+                              <div class="card-row">
+                                 <!-- to hide ico-visa - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-visa hidden-block">
+                                    <svg>
+                                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-visa"></use>
+                                    </svg>
+                                 </i>
+                                 <!-- to hide ico-mastercard - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-mastercard">
+                                    <svg>
+                                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
+                                    </svg>
+                                 </i>
+                                 <span class="card-number">**** 4242</span>
+                                 <i class="ico ico-down-arrow">
+                                    <svg>
+                                      <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-down-arrow"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                           </div>
+                           <button class="btn" type="button">Donate</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- section-payment-methods -->
+         <section class="section-payment-methods ">
+            <div class="container">
+               <div class="content">
+                  <h2 class="title">Payment methods</h2>
+                  <ul class="list">
+                     <li class="item">
+                        <!-- if we have default card, need to add class .default-card to the .card-wrap and we will have only 1 btn during hover -->
+                        <div class="card-wrap default-card">
+                           <div class="card-initials">
+                              <div class="card-upper-row">
+                                 <!-- to hide ico-visa - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-visa hidden-block">
+                                    <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-visa"></use>
+                                    </svg>
+                                 </i>
+                                 <!-- to hide ico-mastercard - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-mastercard">
+                                    <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="card-number">**** **** **** 4242</div>
+                              <div class="card-expired">11/23</div>
+                           </div>
+                           <div class="footnote-text">
+                              <span class="count">0</span> donations
+                           </div>
+                        </div>
+                        <div class="btns-block">
+                           <a href="#" class="btn">Transfer donations</a>
+                           <a href="#" class="btn">Set as default</a>
+                           <a href="#" class="btn red-text btn-remove">Remove</a>
+                        </div>
+                     </li>
+                     <li class="item">
+                        <!-- if we have default card, need to add class .default-card to the .card-wrap and we will have only 1 btn during hover -->
+                        <div class="card-wrap">
+                           <div class="card-initials">
+                              <div class="card-upper-row">
+                                 <!-- to hide ico-visa - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-visa">
+                                    <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-visa"></use>
+                                    </svg>
+                                 </i>
+                                 <!-- to hide ico-mastercard - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                                 <i class="ico ico-mastercard hidden-block">
+                                    <svg>
+                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
+                                    </svg>
+                                 </i>
+                              </div>
+                              <div class="card-number">**** **** **** 4242</div>
+                              <div class="card-expired">11/23</div>
+                           </div>
+                           <div class="footnote-text">
+                              <span class="count">11</span> donations
+                           </div>
+                        </div>
+                        <div class="btns-block">
+                           <a href="#" class="btn">Transfer donations</a>
+                           <a href="#" class="btn">Set as default</a>
+                           <a href="#" class="btn red-text btn-remove">Remove</a>
+                        </div>
+                     </li>
+                     <li class="item added-card">
+                        <div class="cross-block"></div>
+                        <div class="text">Add card</div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="container">
+            <div class="content">
+               <a class="logo" href="#">
+                  <i class="ico ico-logo-footer">
+                     <svg>
+                       <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-logo-footer"></use>
+                     </svg>
+                  </i>
+               </a>
+               <p class="footer-text">
+                  Direct Help. &copy;2022
+               </p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- manager btns -->
+      <div class="manager-btns hidden-block">
+         <ul class="list">
+            <li class="item">
+               <a href="#" class="link">
+                  <i class="ico ico-arrow">
+                     <svg>
+                        <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-arrow"></use>
+                     </svg>
+                  </i>
+               </a>
+            </li>
+            <li class="item">
+               <a href="#" class="link">
+                  <i class="ico ico-cross">
+                     <svg>
+                        <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-cross"></use>
+                     </svg>
+                  </i>
+               </a>
+            </li>
+            <li class="item">
+               <a href="#" class="link btn-link">
+                  DONATE
+                  <i class="ico ico-heart-blue">
+                     <!-- <svg>
+                        <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-heart-blue"></use>
+                     </svg> -->
+                     <svg>
+                        <path d="M19.058 3.54772C16.8863 2.33816 13.6288 3.20213 12 5.44846C10.3712 3.20213 7.11371 2.33816 4.94202 3.54772C1.32255 5.44846 1.14157 10.6323 3.85618 14.9522C6.93274 19.7904 12 21 12 21C12 21 17.0673 19.7904 20.1438 14.9522C22.8584 10.8051 22.6775 5.44846 19.058 3.54772Z" fill="url(#paint0_linear_401_57)"/>
+                        <defs>
+                           <linearGradient id="paint0_linear_401_57" x1="6" y1="3" x2="12" y2="17" gradientUnits="userSpaceOnUse">
+                           <stop stop-color="#6FA5FF"/>
+                           <stop offset="1" stop-color="#2E76F9"/>
+                           </linearGradient>
+                        </defs>
+                     </svg>
+                  </i>
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+
+   <script src="js/js.js"></script>
+   <script src="js/svguse.js"></script>
+
+</body>
+</html>
