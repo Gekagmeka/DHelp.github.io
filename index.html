@@ -43,7 +43,7 @@
                   </button>
                   <!-- if user is autorized - need to add class .user-autorized to .personal-info and it will work hover effect with logout -->
                   <!-- if user is NOT autorized - need to remove class .user-autorized from .personal-info and we can see Sign in instead of user name -->
-                  <div class="personal-info user-autorized">
+                  <div class="personal-info">
                      <div class="personal-ico">
                         <!-- if we have logged in user - need to add class .hidden-block to the .ico.ico-user block - to hide this block -->
                         <i class="ico ico-user">
@@ -74,7 +74,7 @@
       </header>
       <main class="main">
          <!-- filters block -->
-         <section class="section-filters">
+         <section class="section-filters hidden-block">
             <div class="container">
                <ul class="tabs">
                   <li class="tabs-item active">
@@ -471,7 +471,7 @@
             </div>
          </section>
          <!-- section-payment-methods -->
-         <section class="section-payment-methods ">
+         <section class="section-payment-methods hidden-block">
             <div class="container">
                <div class="content">
                   <h2 class="title">Payment methods</h2>
@@ -546,6 +546,77 @@
                </div>
             </div>
          </section>
+         <!-- section sign-in -->
+         <section class="section-sign-in">
+            <div class="container">
+               <div class="sign-in-body">
+                  <div class="sign-in-content upper-content">
+                     <h2 class="title">
+                        Sign in
+                     </h2>
+                     <form action="" class="form">
+                        <!-- field email -->
+                        <div class="form-group">
+                           <!-- if it has error (not validated field) we need to add class is-error to the class input group -->
+                           <div class="input-group is-error">
+                              <input class="form-control control-email" type="email" name="email" placeholder="Email" required>
+                           </div>
+                           <div class="input-error">Wrong email</div>
+                        </div>
+                        <!-- field email -->
+                        <div class="form-group">
+                           <!-- if it has error (not validated field) we need to add class is-error to the class input group -->
+                           <div class="input-group is-error">
+                              <input class="form-control control-password" type="password" name="password" placeholder="Password" required>
+                           </div>
+                           <div class="input-error">Wrong password</div>
+                        </div>
+                        <p class="forgotten-text">
+                           <a href="#" class="link">Forgot password</a>
+                        </p>
+                        <div class="btn-box">
+                           <button class="btn btn-submit" type="submit">
+                              Login
+                           </button>
+                        </div>
+                     </form>
+                     <p class="divider-text">
+                        or create account if you don’t have it
+                     </p>
+                     <div class="btn-box">
+                        <button class="btn btn-create" type="button">
+                           Create account
+                        </button>
+                     </div>
+                  </div>
+                  <div class="sign-in-content lower-content">
+                     <p class="divider-text">
+                        You can also login use your socials
+                     </p>
+                     <div class="btn-box">
+                        <a class="btn" href="#">
+                           <i class="ico ico-facebook">
+                              <svg>
+                                 <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-facebook"></use>
+                              </svg>
+                           </i>
+                           Sign in with Facebook
+                        </a>
+                     </div>
+                     <div class="btn-box">
+                        <a class="btn" href="#">
+                           <i class="ico ico-google">
+                              <svg>
+                                 <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-google"></use>
+                              </svg>
+                           </i>
+                           Sign in with Google
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
       <footer class="footer">
          <div class="container">
@@ -606,6 +677,7 @@
             </li>
          </ul>
       </div>
+
    </div>
 
    <script src="js/js.js"></script>

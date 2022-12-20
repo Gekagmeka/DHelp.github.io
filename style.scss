@@ -64,7 +64,7 @@ body {
       width: 180px;
       height: 180px;
    }
-   
+
    img {
       position: absolute;
       top: 0;
@@ -99,7 +99,7 @@ body {
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 99;
+   z-index: 102;
    width: 100%;
    background-color: $blue-2;
 
@@ -263,6 +263,9 @@ body {
    .personal-ico {
       display: flex;
       align-items: center;
+      &:hover {
+         cursor: pointer;
+      }
    }
    .personal-options {
       display: none;
@@ -304,7 +307,7 @@ body {
          &:hover {
             cursor: pointer;
             background-color: $white;
-   
+
             .list {
                opacity: 1;
                visibility: visible;
@@ -338,13 +341,13 @@ body {
          opacity: 0;
          visibility: hidden;
          overflow: hidden;
-   
+
          @media screen and (max-width: 768px) {
             min-width: 120px;
             border-radius: 15px 0 15px 15px;
             border: 1px solid $grey-2;
          }
-   
+
          &::after {
             content: '';
             display: block;
@@ -369,7 +372,7 @@ body {
             &.red-text {
                color: $red;
             }
-            
+
             &:hover {
                @media screen and (min-width: 1024px) {
                   background-color: $grey-8;
@@ -490,7 +493,7 @@ body {
             }
          }
       }
-      
+
       // .img-smooth {
       //    position: relative;
       //    width: 250px;
@@ -502,7 +505,7 @@ body {
       //       width: 180px;
       //       height: 180px;
       //    }
-         
+
       //    img {
       //       position: absolute;
       //       top: 0;
@@ -593,7 +596,7 @@ body {
             margin: 0 0 30px;
          }
       }
-   
+
       .text {
          font: 400 18px/1.4 $base-font-family-sans-serif;
          color: $black;
@@ -663,7 +666,7 @@ body {
             fill: $blue-2;
          }
       }
-      
+
    }
 
    //right side
@@ -774,7 +777,7 @@ body {
             font-size: 18px;
             word-break: break-all;
          }
-         
+
       }
       .email-btn {
          min-width: 300px;
@@ -930,12 +933,12 @@ body {
                   filter: blur(10px);
                }
             }
-   
+
                .btns-block {
                   visibility: visible;
                   opacity: 1;
                }
-            
+
          }
          &:last-child {
             margin-right: 0;
@@ -1202,7 +1205,7 @@ body {
       @media screen and (max-width: 480px) {
          justify-content: center;
       }
-      
+
       .item {
          position: relative;
          width: 385px;
@@ -1219,7 +1222,7 @@ body {
          @media screen and (max-width: 667px) {
             width: 385px;
             margin: 0 0 20px;
-            min-height: 160px;
+            min-height: 200px;
             font-size: 24px;
          }
          @media screen and (max-width: 360px) {
@@ -1237,7 +1240,7 @@ body {
                visibility: visible;
                opacity: 1;
             }
-            
+
          }
          &:last-child {
             margin-right: 0;
@@ -1404,7 +1407,7 @@ body {
          &.red-text {
             color: $red;
          }
-         
+
       }
    }
    .btn {
@@ -1417,6 +1420,159 @@ body {
       font: 400 18px/1.4 $base-font-family-sans-serif;
       letter-spacing: -0.03em;
       color: $black;
+   }
+}
+
+//section sign-in
+.section-sign-in {
+   padding: 160px 0 20px;
+
+   @media screen and (max-width: 768px) {
+      padding: 110px 0 20px;
+   }
+
+   .sign-in-body {
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+   }
+   
+   .sign-in-content {
+      padding: 30px 40px;
+      background: $white;
+      border-radius: 20px;
+      @media screen and (max-width: 768px) {
+         padding: 30px;
+      }
+      @media screen and (max-width: 480px) {
+         padding: 20px 10px;
+      }
+
+      &.upper-content {
+         margin: 0 0 20px;
+      }
+
+      .title {
+         margin: 0 0 20px;
+         text-transform: capitalize;
+      }
+   }
+   .form {
+      .form-group {
+         display: block;
+         min-height: 60px;
+         margin: 0 0 20px;
+      }
+      .input-group {
+         display: block;
+         position: relative;
+         height: 60px;
+         &.is-error {
+            & + .input-error {
+               display: block;
+            }
+            .form-control {
+               border-color: $red;
+            }
+         }
+         .form-control {
+            display: block;
+            width: 100%;
+            padding: 19px 15px;
+            border-radius: 15px;
+            background-color: $grey-8;
+            font: 500 18px/1.2 $base-font-family-sans-serif;
+            color: $black;
+            letter-spacing: -0.03em;
+            border: 1px solid $grey-8;
+            &:focus {
+               border-color: $blue-2;
+            }
+            &::placeholder {
+               color: $grey;
+               letter-spacing: -0.02em;
+            }
+         }
+      }
+      .input-error {
+         display: none;
+         margin-top: 5px;
+         padding-left: 15px;
+         font: 500 14px/1.4 $base-font-family-sans-serif;
+         color: $red;
+      }
+      .forgotten-text {
+         margin: 0 0 20px;
+         .link {
+            font: 500 18px/1.2 $base-font-family-sans-serif;
+            color: $blue-2;
+            letter-spacing: -0.03em;
+         }
+      }
+      .btn {
+         width: 100%;
+         display: block;
+         transition: all 0.1s ease-in;
+         &.btn-submit {
+            background-color: $blue-2;
+            color: $white;
+         }
+      }
+      .btn-box {
+         margin: 0 0 20px;
+      }
+   }
+   .btn-create {
+      width: 100%;
+      display: block;
+      transition: all 0.1s ease-in;
+      &:hover {
+         @media screen and (min-width: 1024px) {
+            background-color: $blue-2;
+            color: $white;
+         }
+      }
+   }
+   .divider-text {
+      margin: 0 0 20px;
+      text-align: center;
+      font: 500 18px/1.2 $base-font-family-sans-serif;
+      color: $grey;
+      letter-spacing: -0.03em;
+   }
+   .lower-content {
+      .btn-box {
+         margin: 0 0 15px;
+         &:last-of-type {
+            margin: 0;
+         }
+      }
+      .btn {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         line-height: 1;
+         color: $black;
+         transition: all 0.1s ease-in;
+         &:hover {
+            @media screen and (min-width: 1024px) {
+               background-color: $grey-11;
+            }
+         }
+         .ico-facebook,
+         .ico-google {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+            margin-right: 10px;
+            svg {
+               fill: $blue-2;
+            }
+         }
+      }
    }
 }
 
@@ -1452,6 +1608,7 @@ body {
 //manager btns
 .manager-btns {
    position: fixed;
+   z-index: 100;
    bottom: 30px;
    left: 50%;
    transform: translateX(-50%);

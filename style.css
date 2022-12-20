@@ -148,7 +148,7 @@ body.closed {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 102;
   width: 100%;
   background-color: #4285F4;
 }
@@ -329,6 +329,9 @@ body.closed {
 .personal-block .personal-ico {
   display: flex;
   align-items: center;
+}
+.personal-block .personal-ico:hover {
+  cursor: pointer;
 }
 .personal-block .personal-options {
   display: none;
@@ -1335,7 +1338,7 @@ body.closed {
   .section-payment-methods .list .item {
     width: 385px;
     margin: 0 0 20px;
-    min-height: 160px;
+    min-height: 200px;
     font-size: 24px;
   }
 }
@@ -1551,6 +1554,162 @@ body.closed {
   color: #000;
 }
 
+.section-sign-in {
+  padding: 160px 0 20px;
+}
+@media screen and (max-width: 768px) {
+  .section-sign-in {
+    padding: 110px 0 20px;
+  }
+}
+.section-sign-in .sign-in-body {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.section-sign-in .sign-in-content {
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+  .section-sign-in .sign-in-content {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-sign-in .sign-in-content {
+    padding: 20px 10px;
+  }
+}
+.section-sign-in .sign-in-content.upper-content {
+  margin: 0 0 20px;
+}
+.section-sign-in .sign-in-content .title {
+  margin: 0 0 20px;
+  text-transform: capitalize;
+}
+.section-sign-in .form .form-group {
+  display: block;
+  min-height: 60px;
+  margin: 0 0 20px;
+}
+.section-sign-in .form .input-group {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+.section-sign-in .form .input-group.is-error + .input-error {
+  display: block;
+}
+.section-sign-in .form .input-group.is-error .form-control {
+  border-color: #E81010;
+}
+.section-sign-in .form .input-group .form-control {
+  display: block;
+  width: 100%;
+  padding: 19px 15px;
+  border-radius: 15px;
+  background-color: #E9EEF1;
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #000;
+  letter-spacing: -0.03em;
+  border: 1px solid #E9EEF1;
+}
+.section-sign-in .form .input-group .form-control:focus {
+  border-color: #4285F4;
+}
+.section-sign-in .form .input-group .form-control::-moz-placeholder {
+  color: #929292;
+  letter-spacing: -0.02em;
+}
+.section-sign-in .form .input-group .form-control:-ms-input-placeholder {
+  color: #929292;
+  letter-spacing: -0.02em;
+}
+.section-sign-in .form .input-group .form-control::placeholder {
+  color: #929292;
+  letter-spacing: -0.02em;
+}
+.section-sign-in .form .input-error {
+  display: none;
+  margin-top: 5px;
+  padding-left: 15px;
+  font: 500 14px/1.4 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #E81010;
+}
+.section-sign-in .form .forgotten-text {
+  margin: 0 0 20px;
+}
+.section-sign-in .form .forgotten-text .link {
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #4285F4;
+  letter-spacing: -0.03em;
+}
+.section-sign-in .form .btn {
+  width: 100%;
+  display: block;
+  transition: all 0.1s ease-in;
+}
+.section-sign-in .form .btn.btn-submit {
+  background-color: #4285F4;
+  color: #fff;
+}
+.section-sign-in .form .btn-box {
+  margin: 0 0 20px;
+}
+.section-sign-in .btn-create {
+  width: 100%;
+  display: block;
+  transition: all 0.1s ease-in;
+}
+@media screen and (min-width: 1024px) {
+  .section-sign-in .btn-create:hover {
+    background-color: #4285F4;
+    color: #fff;
+  }
+}
+.section-sign-in .divider-text {
+  margin: 0 0 20px;
+  text-align: center;
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #929292;
+  letter-spacing: -0.03em;
+}
+.section-sign-in .lower-content .btn-box {
+  margin: 0 0 15px;
+}
+.section-sign-in .lower-content .btn-box:last-of-type {
+  margin: 0;
+}
+.section-sign-in .lower-content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: #000;
+  transition: all 0.1s ease-in;
+}
+@media screen and (min-width: 1024px) {
+  .section-sign-in .lower-content .btn:hover {
+    background-color: #e3e3e3;
+  }
+}
+.section-sign-in .lower-content .btn .ico-facebook,
+.section-sign-in .lower-content .btn .ico-google {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 10px;
+}
+.section-sign-in .lower-content .btn .ico-facebook svg,
+.section-sign-in .lower-content .btn .ico-google svg {
+  fill: #4285F4;
+}
+
 .footer .container {
   max-width: 1580px;
 }
@@ -1578,6 +1737,7 @@ body.closed {
 
 .manager-btns {
   position: fixed;
+  z-index: 100;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
