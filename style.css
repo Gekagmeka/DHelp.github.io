@@ -1303,11 +1303,31 @@ body.closed {
     margin: 0 0 20px;
   }
 }
+.section-payment-methods .card-upper-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-payment-methods .text-default {
+  display: none;
+  margin-left: 10px;
+  text-align: center;
+  min-width: 70px;
+  padding: 2px 5px;
+  background-color: #4285F4;
+  border-radius: 10px;
+  font: 500 14px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
 .section-payment-methods .default-card + .btns-block .btn {
   display: none;
 }
 .section-payment-methods .default-card + .btns-block .btn.btn-remove {
   display: flex;
+}
+.section-payment-methods .default-card .text-default {
+  display: block;
 }
 .section-payment-methods .list {
   display: flex;
@@ -1552,6 +1572,242 @@ body.closed {
   font: 400 18px/1.4 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: -0.03em;
   color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .section-billing .content {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section-billing .content {
+    padding: 20px 10px;
+  }
+}
+.section-billing .title {
+  margin: 0 0 30px;
+}
+@media screen and (max-width: 480px) {
+  .section-billing .title {
+    margin: 0 0 20px;
+  }
+}
+.section-billing .img-smooth {
+  width: 79px;
+  height: 79px;
+  margin-right: 20px;
+}
+.section-billing .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid #E9EEF1;
+  margin: 0 0 30px;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.section-billing .row:last-child {
+  margin: 0;
+}
+.section-billing .row .column {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 768px;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .column {
+    margin: 0 0 20px;
+    max-width: inherit;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-billing .row .column {
+    margin: 0 0 40px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .column:last-child {
+    margin: 0;
+  }
+}
+.section-billing .row .column.user-info {
+  flex: 1;
+}
+.section-billing .row .column.donation-info {
+  justify-content: space-between;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .column.donation-info {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-billing .row .column.donation-info {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-billing .row .column.donation-info {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.section-billing .row .block-name {
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #4285F4;
+  letter-spacing: -0.03em;
+}
+.section-billing .row .ico-visa,
+.section-billing .row .ico-mastercard {
+  height: 20px;
+  min-height: 20px;
+  margin-right: 10px;
+  display: inline-flex;
+}
+.section-billing .row .ico-visa {
+  width: 60px;
+  min-width: 60px;
+}
+.section-billing .row .ico-visa.hidden-block {
+  display: none;
+}
+.section-billing .row .ico-visa svg {
+  fill: #2566AF;
+}
+.section-billing .row .ico-mastercard {
+  width: 33px;
+  min-width: 33px;
+}
+.section-billing .row .ico-mastercard.hidden-block {
+  display: none;
+}
+.section-billing .row .block-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 190px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .block-card {
+    flex: 0 1 auto;
+    margin-right: 60px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-billing .row .block-card {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-billing .row .block-card {
+    margin: 0 0 20px;
+  }
+}
+.section-billing .row .block-date {
+  display: flex;
+  justify-content: center;
+  flex: 1 0 280px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .block-date {
+    flex: 0 1 auto;
+    margin-right: 60px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-billing .row .block-date {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .section-billing .row .block-date {
+    margin: 0 0 20px;
+  }
+}
+.section-billing .row .block-date time {
+  text-align: center;
+}
+.section-billing .row .block-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 260px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .block-price {
+    flex: 0 1 auto;
+    padding: 0;
+  }
+}
+.section-billing .row .card-number {
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #000;
+  letter-spacing: -0.03em;
+}
+.section-billing .row .block-date {
+  font: 500 18px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #929292;
+  letter-spacing: -0.03em;
+}
+.section-billing .row .value {
+  flex: 1 0 140px;
+  text-align: center;
+  font: 500 38px/1.2 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #000;
+  letter-spacing: -0.03em;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .value {
+    flex: 0 1 auto;
+  }
+}
+.section-billing .row .result-text {
+  padding: 2px 5px;
+  min-width: 100px;
+  margin-left: 30px;
+  text-align: center;
+  border-radius: 10px;
+  font: 500 14px/1.5 "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+  color: #fff;
+  letter-spacing: -0.03em;
+}
+@media screen and (max-width: 1199px) {
+  .section-billing .row .result-text {
+    margin-left: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-billing .row .result-text {
+    margin-left: 30px;
+  }
+}
+.section-billing .row .result-text .succeeded,
+.section-billing .row .result-text .failed {
+  display: none;
+}
+.section-billing .row .result-text.green-bg {
+  background-color: #35C254;
+}
+.section-billing .row .result-text.green-bg .succeeded {
+  display: block;
+}
+.section-billing .row .result-text.red-bg {
+  background-color: #E81010;
+}
+.section-billing .row .result-text.red-bg .failed {
+  display: block;
 }
 
 .section-sign-in {

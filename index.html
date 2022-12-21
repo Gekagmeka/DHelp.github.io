@@ -123,9 +123,9 @@
                         </div>
                      </div>
                      <div class="name-block">
-                        <h2 class="name-row">
+                        <div class="name-row">
                            Lilia Vykhodtseva
-                        </h2>
+                        </div>
                         <ul class="list">
                            <li class="item">
                                50 years
@@ -315,9 +315,9 @@
                      </div>
                   </div>
                   <div class="text-block">
-                     <h2 class="title name-row">
+                     <div class="title name-row">
                         Konstatyn Konstantynopolsky
-                     </h2>
+                     </div>
                      <p class="text-row">
                         Helped no one, but we believe in you :)
                      </p>
@@ -364,9 +364,9 @@
                                             sizes="(max-width: 480px) 100px, 180px" 
                                     src="images/img-07-1920.png" width="180" height="180" alt="">
                                  </div>
-                                 <h4 class="cards-name">
+                                 <div class="cards-name">
                                     Lilia Vykhodtseva
-                                 </h4>
+                                 </div>
                                  <div class="cards-price">
                                     30$<span class="per-month">/mo</span>
                                  </div>
@@ -390,9 +390,9 @@
                                             sizes="(max-width: 480px) 100px, 180px" 
                                     src="images/img-08-1920.png" width="180" height="180" alt="">
                                  </div>
-                                 <h4 class="cards-name">
+                                 <div class="cards-name">
                                     Vladyslav Zhuravlev
-                                 </h4>
+                                 </div>
                                  <div class="cards-price">
                                     30$<span class="per-month">/mo</span>
                                  </div>
@@ -416,9 +416,9 @@
                                             sizes="(max-width: 480px) 100px, 180px" 
                                     src="images/img-09-1920.png" width="180" height="180" alt="">
                                  </div>
-                                 <h4 class="cards-name">
+                                 <div class="cards-name">
                                     Yevhen Hlinka
-                                 </h4>
+                                 </div>
                                  <div class="cards-price">
                                     30$<span class="per-month">/mo</span>
                                  </div>
@@ -493,6 +493,10 @@
                                     <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
                                     </svg>
                                  </i>
+                                 <!-- text-default (it is hidden default) -->
+                                 <div class="text-default">
+                                    Default
+                                 </div>
                               </div>
                               <div class="card-number">**** **** **** 4242</div>
                               <div class="card-expired">11/23</div>
@@ -524,6 +528,10 @@
                                     <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
                                     </svg>
                                  </i>
+                                 <!-- text-default (it is hidden default) -->
+                                 <div class="text-default">
+                                    Default
+                                 </div>
                               </div>
                               <div class="card-number">**** **** **** 4242</div>
                               <div class="card-expired">11/23</div>
@@ -546,8 +554,102 @@
                </div>
             </div>
          </section>
+         <!-- section billing history (frame 118) -->
+         <section class="section-billing hidden-block">
+            <div class="container">
+               <div class="content">
+                  <h2 class="title">Billing history</h2>
+                  <!-- user -->
+                  <div class="row">
+                      <div class="column user-info">
+                        <div class="img-block">
+                           <div class="img-smooth">
+                              <img src="images/img-10.png" width="79" height="79" alt="">
+                           </div>
+                        </div>
+                        <div class="block-name">
+                           Lilia Vykhodtseva
+                        </div>
+                      </div>
+                      <div class="column donation-info">
+                        <div class="block-card">
+                           <!-- to hide ico-visa - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                           <i class="ico ico-visa hidden-block">
+                              <svg>
+                                 <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-visa"></use>
+                              </svg>
+                           </i>
+                           <!-- to hide ico-mastercard - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                           <i class="ico ico-mastercard">
+                              <svg>
+                                 <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
+                              </svg>
+                           </i>
+                           <span class="card-number">* 4242</span>
+                        </div>
+                        <div class="block-date">
+                           <time datetime="YYYY-MM-DDThh:mmTZD">Wed, Dec 14, 2022 14:57</time>
+                        </div>
+                        <div class="block-price">
+                           <div class="value">
+                              30$
+                           </div>
+                           <!-- if we want to get failed block instead of green - need to remove grenn-bg and add red-bg class -->
+                           <div class="result-text green-bg">
+                              <span class="succeeded">Succeeded</span>
+                              <span class="failed">Failed</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- user -->
+                  <div class="row">
+                     <div class="column user-info">
+                       <div class="img-block">
+                          <div class="img-smooth">
+                             <img src="images/img-11.png" width="79" height="79" alt="">
+                          </div>
+                       </div>
+                       <div class="block-name">
+                        Vladyslav Zhuravlev
+                       </div>
+                     </div>
+                     <div class="column donation-info">
+                       <div class="block-card">
+                          <!-- to hide ico-visa - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                          <i class="ico ico-visa">
+                             <svg>
+                                <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-visa"></use>
+                             </svg>
+                          </i>
+                          <!-- to hide ico-mastercard - need to add hidden-block / to show ico - to remove class .hidden-block -->
+                          <i class="ico ico-mastercard hidden-block">
+                             <svg>
+                                <use xmlns="http://www.w3.org/2000/svg" xlink:href="images/svg/symbol-defs.svg#ico-mastercard"></use>
+                             </svg>
+                          </i>
+                          <span class="card-number">* 4242</span>
+                       </div>
+                       <div class="block-date">
+                          <time datetime="YYYY-MM-DDThh:mmTZD">Wed, Dec 14, 2022 14:57</time>
+                       </div>
+                       <div class="block-price">
+                          <div class="value">
+                             130$
+                          </div>
+                          <!-- if we want to get failed block instead of green - need to remove grenn-bg and add red-bg class and vice versa -->
+                          <div class="result-text red-bg">
+                             <span class="succeeded">Succeeded</span>
+                             <span class="failed">Failed</span>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+         </section>
          <!-- section sign-in -->
-         <section class="section-sign-in">
+         <section class="section-sign-in ">
             <div class="container">
                <div class="sign-in-body">
                   <div class="sign-in-content upper-content">
